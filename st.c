@@ -1066,6 +1066,17 @@ getsel(void)
 			*ptr++ = '\n';
 	}
 	*ptr = 0;
+
+	/*
+		Do not include a trailing new line in the selection, or it will be there
+		when a line is pasted which is annoying.
+
+		This should probably be handled when triple clicking on a line but this
+		is easier.
+	*/
+	if (ptr > str && ptr[-1] == '\n') {
+		ptr[-1] = '\0';
+	}
 	return str;
 }
 
