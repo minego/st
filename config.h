@@ -7,7 +7,8 @@
  */
 // static char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 // static char font[] = "ProggyTinyTT:size=16:antialias=false:autohint=false";
-static char font[] = "xos4 Terminus:size=10:antialias=false:autohint=false";
+// static char font[] = "xos4 Terminus:size=10:antialias=false:autohint=false";
+static char font[] = "xos4 Terminess Powerline:size=10:antialias=false:autohint=false";
 static int borderpx = 2;
 static int histsize = 2000;
 
@@ -77,7 +78,7 @@ static const int alpha = 0xdd;
 static const char *colorname[] = {
 
   /* 8 normal colors */
-  [0] = "#101010", /* black   */
+  [0] = "#000000", /* black   */
   [1] = "#e84f4f", /* red     */
   [2] = "#b8d68c", /* green   */
   [3] = "#e1aa5d", /* yellow  */
