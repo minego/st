@@ -6,7 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static char font[] = "ProggyTinyTT:size=16:antialias=false:autohint=false";
+// static char font[] = "ProggyTinyTT:size=16:antialias=false:autohint=false";
+static char font[] = "xos4 Terminus:size=10:antialias=false:autohint=false";
 static int borderpx = 2;
 static int histsize = 2000;
 
