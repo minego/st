@@ -3540,6 +3540,15 @@ xzoomreset(const Arg *arg)
 	}
 }
 
+static int (*xerrorxlib)(Display *, XErrorEvent *);
+
+int
+xerror(Display *dpy, XErrorEvent *ee) {
+	fprintf(stderr, "st: fatal error: request code=%d, error code=%d\n",
+			ee->request_code, ee->error_code);
+	return xerrorxlib(dpy, ee); /* may call exit */
+}
+
 void
 xinit(void)
 {
@@ -3584,6 +3593,8 @@ xinit(void)
 			exit(1);
 		}
 	}
+
+	xerrorxlib = XSetErrorHandler(xerror);
 
 	/* font */
 	if (!FcInit())
